@@ -1,8 +1,9 @@
 import "./styles.css";
 import { useState, useEffect } from "react";
+const logo = require('./WhatsApp Image 2023-01-05 at 11.42.36 AM.jpeg')
 
 export default function Body() {
-  const [form, setForm] = useState({ upperText: "", lowerText: "", url: "" });
+  const [form, setForm] = useState({ upperText: "", lowerText: "", url: logo });
   const [urlarray, setURLarray] = useState();
 
   function handleChange(e) {
@@ -41,7 +42,7 @@ export default function Body() {
           className="form--input"
           placeholder="Upper text"
           name="upperText"
-          autocomplete="off"
+          autoComplete="off"
           onChange={handleChange}
           value={form.upperText}
         />
@@ -49,7 +50,7 @@ export default function Body() {
           className="form--input"
           placeholder="Lower text"
           name="lowerText"
-          autocomplete="off"
+          autoComplete="off"
           onChange={handleChange}
           value={form.lowerText}
         />
